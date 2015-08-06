@@ -57,7 +57,7 @@
     
     [super viewDidLoad];
     
-    SNMaskSegmentedControl *seg = [[SNMaskSegmentedControl alloc] initWithFrame:CGRectMake(0, 300, 200, 30)];
+    SNMaskSegmentedControl *seg = [[SNMaskSegmentedControl alloc] initWithFrame:CGRectMake(0, 300, 40, 30)];
     [self.view addSubview:seg];
     
     [self creatLayer];
@@ -66,6 +66,45 @@
     [self change];
     //[NSTimer scheduledTimerWithTimeInterval:10000.0 target:self selector:@selector(change) userInfo:nil repeats:YES];
     
+    
+//    // create a yellow background
+//    UIView *bg = [[UIView alloc] initWithFrame:self.view.bounds];
+//    bg.backgroundColor = [UIColor yellowColor];
+//    [self.view addSubview:bg];
+//    
+//    // create the layer on top of the yellow background that will be masked
+//    CALayer *imageLayer = [CALayer layer];
+//    imageLayer.frame = self.view.layer.bounds;
+//    imageLayer.backgroundColor = [[UIColor blueColor] CGColor];
+//    
+//    // create the mask that will be applied to the layer on top of the yellow background
+//    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+//    maskLayer.fillRule = kCAFillRuleEvenOdd;
+//    maskLayer.frame = self.view.frame;
+//    
+//    // add the paths to sublayers of the mask
+//    CGMutablePathRef p1 = CGPathCreateMutable();
+//    CGPathMoveToPoint(p1, NULL, 15, 0);
+//    CGPathAddArc(p1, NULL, 15, 15, 15, M_PI_2, -M_PI_2, true);
+//    
+//    //CGPathAddPath(p1, nil, CGPathCreateWithEllipseInRect((CGRect){{80, 40}, {190, 190}}, nil));
+//    CGPathAddPath(p1, nil, CGPathCreateWithRect((CGRect){{0, 0}, {100, 30}}, nil));
+//    maskLayer.path = p1;
+//    
+//    // apply the mask to the layer on top of the yellow background
+//    imageLayer.mask = maskLayer;
+//    [self.view.layer addSublayer:imageLayer];
+//    
+//    
+//    
+//    // display the path of the masks the for screenshot
+//    CAShapeLayer *pathLayer1 = [CAShapeLayer layer];
+//    pathLayer1.path = maskLayer.path;
+//    pathLayer1.lineWidth = 2.0;
+//    pathLayer1.strokeColor = [UIColor blackColor].CGColor;
+//    pathLayer1.fillColor = [UIColor clearColor].CGColor;
+//    //[self.view.layer addSublayer:pathLayer1];
+
 }
 
 
