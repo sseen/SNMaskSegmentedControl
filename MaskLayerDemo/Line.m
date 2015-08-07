@@ -7,7 +7,7 @@
 
 
 //相邻小球之间的距离
-#define DISTANCE 40 
+#define DISTANCE 30 
 
 #import "Line.h"
 #import "KYSpringLayerAnimation.h"
